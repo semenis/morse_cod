@@ -5,9 +5,9 @@ def encodeToMorse(text = 'Разработчики: TevaSTARK,semenis,Dikower',l
     for i in text.upper():
         if i in language:
             res.append(language[i])
-    return('\t'.join(res))#Потому что потом сплитоваться не правильно будет
+    return(' '.join(res))#Потому что потом сплитоваться не правильно будет
 def decodeFromMorse(code):
     pass
-print(encodeToMorse(text='Any text'))
 def main():
     pass
+print(encodeToMorse(text='Any text'))
