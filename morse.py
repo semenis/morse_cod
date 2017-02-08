@@ -5,4 +5,4 @@ def encodeToMorse(text = 'Разработчики: TevaSTARK,semenis,Dikower',l
         if i in language:
             res.append(language[i])
     return(' '.join(res))
-print(encodeToMorse('I am stupid 0_0'))
+print(encodeToMorse('Text example'))
