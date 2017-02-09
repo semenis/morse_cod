@@ -33,12 +33,7 @@ def decodeFromMorse(text, language=MorseCodeEng):
                     res.append(a)
         res.append(' ')
     return (''.join(res).lower().strip())
-def main():
-    language = 'eng'
-    func = 'encode'
-    print('Помощь:help')
-    print('Завершение работы функции:exit')
-    def askLanguage():
+def askLanguage():
         while True:
             language = input('Choose the language (eng or rus): ')
             language = language.lower()
@@ -51,19 +46,25 @@ def main():
             else:
                 print('Не правильный язык или ввод, повторите снова.')
                 continue
+def main():
+    language = 'eng'
+    func = 'encode'
+    print('Помощь : help')
+    print('Завершение работы функции : exit')
+    
     while True:
         n = input()
         if n == 'Код из говна и палок!':
             print(lol)
         elif n == 'help':
-            print('Текущий язык:',language)
-            print('Текущее действие:',func)
+            print('Текущий язык: ', language)
+            print('Текущее действие: ',func)
             print('Вы можете вводить значения после двоеточия, чтобы изменить настройки.')
-            print('Смена языка:change')
-            print('Кодирование:encode')
-            print('Декодирование:decode')
-            print('Завершение работы функции:exit')
-            print('Разработчики:TevaSTARK,semenis,Dikower')
+            print('Смена языка : change')
+            print('Кодирование : encode')
+            print('Декодирование : decode')
+            print('Завершение работы функции : exit')
+            print('Разработчики: TevaSTARK, semenis, Dikower')
         elif n == 'exit':
             return
         elif n == 'encode':
@@ -81,9 +82,10 @@ def main():
                 try:
                     print(decodeFromMorse(n,arg2))
                 except:
-                    print('Языки различаются! Текущия язык:',language+'. Чтобы поменять введите:change')
+                    print('Языки различаются! Текущия язык:', language + '. Чтобы поменять введите:change')
             else:
                 try:
                     print(encodeToMorse(n,arg2))
                 except:
                     print('Языки различаются! Текущия язык:',language+'. Чтобы поменять введите:change')
+main()
